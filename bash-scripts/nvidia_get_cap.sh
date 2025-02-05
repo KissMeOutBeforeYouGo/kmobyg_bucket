@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ####################
 # Andrey Fomin <andreyafomin@icloud.com>
@@ -17,7 +17,8 @@
 # (1) Nvidia GPU Driver and CUDA libraries
 # (2) TensorRT GA (for trtexec command)
 # (3) Tritonserver (libraries)
-# (4) jq if you
+# (4) jq for parsing json files
+####################
 
 MODELS_VOLUME_DIR=/models
 MODELS_LINK_FILE=$PWD/model-links.json
