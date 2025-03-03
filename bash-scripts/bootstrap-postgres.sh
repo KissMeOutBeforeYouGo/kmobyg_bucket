@@ -30,8 +30,11 @@ if [ ! -e $POSTGRES_INIT_DONE_FILE ]; then
     initdb -D $POSTGRES_DATA_DIR -E UTF8 --pwfile=/home/postgres/passwd
     rm /home/postgres/passwd
     pg_ctl -D $POSTGRES_DATA_DIR start
-    psql -c 'create database "CSS_PLANTS"'
-    pg_restore -d CSS_PLANTS /home/postgres/css_db.template.${SIV_RELEASE_TAG}
+    
+    # Next 2 lines are commented out since you don't have this database template (technically it's a backup),
+    # and they are there just for reference.
+    # psql -c 'create database "CSS_PLANTS"'
+    # pg_restore -d CSS_PLANTS /home/postgres/css_db.template.${SIV_RELEASE_TAG}
     pg_ctl -D $POSTGRES_DATA_DIR  stop
 
     printf "local all all trust\n host all all all md5" \
