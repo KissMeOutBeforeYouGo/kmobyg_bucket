@@ -16,3 +16,5 @@ You may find more in-depth explanations as comments in files directly.
 
 - bash-scripts:
     - *nvidia-get-cap.sh:* simple script used to convert ML models for different Nvidia GPUs;
+    - *build-postgres.sh:* script for building PostgreSQL from source tarball on Astra Linux 1.7.5. Takes `-v` arg, where you specify version you want to build (defaults to 12.17)
+    - *build-python.sh:* script for building Python3 from source tarball on Astra Linux 1.7.5. Takes `-v` arg, where you specify version you want to build (defaults to 3.8.18)
